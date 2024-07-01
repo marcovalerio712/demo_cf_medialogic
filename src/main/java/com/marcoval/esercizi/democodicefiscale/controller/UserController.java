@@ -16,11 +16,12 @@ public class UserController {
     @Autowired
     private UserService userService;
     @GetMapping("birth")
-    //CF = Codice fiscale
+    //cf = Codice fiscale
     public UserBirthBean getBirthData(@RequestParam(name = "cf") String cf){
 
         User userData = userService.getUserBirthInfo(cf);
 
+        //Mappatura su DTO
         UserBirthBean birthData = new UserBirthBean();
         birthData.setBirthDate(userData.getBirthDate());
         birthData.setAge(userData.getAge());

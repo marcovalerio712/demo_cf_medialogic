@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
 
         User result = new User();
 
-        //Prelevo le ultime due cifre dellánno di nascita dal CF
+        //Prelevo le ultime due cifre dell'anno di nascita dal CF
         int year = Integer.parseInt(cf.substring(6,8));
 
         //verifico su ultime due cifre anno corrente per sommare offset a anno nascita
